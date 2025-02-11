@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
-import { NextUIProvider } from '@nextui-org/react'
+import { HeroUIProvider } from '@heroui/react'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -25,9 +25,9 @@ export default function RootLayout({
       <meta name="google" content="notranslate" />
 
       <body className={`${inter.className} h-full`}>
-        <NextUIProvider>
+        <HeroUIProvider>
           <div className="h-[100vh]">{children}</div>
-        </NextUIProvider>
+        </HeroUIProvider>
       </body>
     </html>
   )
