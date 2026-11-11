@@ -1,5 +1,6 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
+// @ts-expect-error CSS is loaded by Next.js as a side effect.
 import './globals.css'
 import { HeroUIProvider } from '@heroui/react'
 import { JSX } from 'react'
@@ -11,20 +12,19 @@ export const metadata: Metadata = {
   description: 'base project',
 }
 
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  viewportFit: 'cover',
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode
 }>): JSX.Element {
   return (
-    <html lang="en" className="light" translate="no">
-      <meta charSet="utf-8" />
-      <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
-      />
-      <meta name="google" content="notranslate" />
-
+    <html lang="en" className="light">
       <body className={`${inter.className} h-full`}>
         <HeroUIProvider>
           <div className="h-[100vh]">{children}</div>

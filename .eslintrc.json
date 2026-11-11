@@ -5,7 +5,8 @@
   },
   "plugins": ["jsx-a11y", "promise"],
   "extends": [
-    "standard-with-typescript",
+    "next/core-web-vitals",
+    "next/typescript",
     "plugin:prettier/recommended",
     "plugin:@next/next/recommended",
     "plugin:jsx-a11y/recommended",
