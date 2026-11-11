@@ -1,17 +1,14 @@
-import { Button } from '@heroui/react'
-import React, { JSX } from 'react'
-
-export default function Home(): JSX.Element {
+export default function Home() {
   return (
-    <div className="bg-white h-full w-full">
-      <p className="text-primary text-2xl font-bold p-10 ">
-        Proyecto Next Base{' '}
-      </p>
-      <p className="text-example-color">Example</p>
-      <Button className="bg-red-500" size="lg" radius="full" variant="shadow">
-        Shadow
-      </Button>
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
-    </div>
+    <main className="flex min-h-screen items-center justify-center bg-background px-6 text-foreground">
+      <div className="max-w-xl space-y-3">
+        <h1 className="text-3xl font-semibold uppercase text-primary">
+          NextBase
+        </h1>
+        <h1 className="text-xl font-medium text-secondary">
+          Proyecto base con Next.js, Tailwind CSS y HeroUI.
+        </h1>
+      </div>
+    </main>
   )
 }
